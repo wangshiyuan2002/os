@@ -93,6 +93,7 @@ extern int sys_execve2();
 extern int sys_getdents();
 extern int sys_sleep();
 extern int sys_getcwd();
+
 fn_ptr sys_call_table[] = { sys_setup, sys_exit, sys_fork, sys_read,
 sys_write, sys_open, sys_close, sys_waitpid, sys_creat, sys_link,
 sys_unlink, sys_execve, sys_chdir, sys_time, sys_mknod, sys_chmod,
@@ -106,9 +107,9 @@ sys_lock, sys_ioctl, sys_fcntl, sys_mpx, sys_setpgid, sys_ulimit,
 sys_uname, sys_umask, sys_chroot, sys_ustat, sys_dup2, sys_getppid,
 sys_getpgrp, sys_setsid, sys_sigaction, sys_sgetmask, sys_ssetmask,
 sys_setreuid,sys_setregid, sys_sigsuspend, sys_sigpending, sys_sethostname,
-sys_setrlimit, sys_getrlimit, sys_getrusage, sys_gettimeofday,
+sys_setrlimit, sys_getrlimit, sys_getrusage, sys_gettimeofday, 
 sys_settimeofday, sys_getgroups, sys_setgroups, sys_select, sys_symlink,
-sys_lstat, sys_readlink, sys_uselib,sys_execve2 ,sys_getdents,sys_sleep,sys_getcwd };
+sys_lstat, sys_readlink, sys_uselib ,sys_execve2,sys_getdents,sys_sleep,sys_getcwd};
 
 /* So we don't have to do any more manual updating.... */
 int NR_syscalls = sizeof(sys_call_table)/sizeof(fn_ptr);
