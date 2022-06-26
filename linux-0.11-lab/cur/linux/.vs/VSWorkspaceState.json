@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\init",
+    "\\kernel"
   ],
-  "SelectedNode": "\\mm",
+  "SelectedNode": "\\init",
   "PreviewInSolutionExplorer": false
 }

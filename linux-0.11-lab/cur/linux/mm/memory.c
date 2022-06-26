@@ -396,7 +396,6 @@ void do_no_page(unsigned long error_code,unsigned long address)
 	free_page(page);
 	oom();
 }
-
 void mem_init(long start_mem, long end_mem)
 {
 	int i;

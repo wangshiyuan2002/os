@@ -7,12 +7,12 @@
 #
 
 AR	=ar
-AS	=as
-LD	=ld
+AS	=as --32
+LD	=ld -m elf_i386
 LDFLAGS	=-s -x
 CC	=gcc -march=i386
 CFLAGS	=-w -g -fstrength-reduce -fomit-frame-pointer -mcld \
-	-nostdinc -fno-stack-protector -I../../include
+	-nostdinc -fno-stack-protector -I../../include -m32
 CPP	=gcc -E -nostdinc -I../../include
 
 .c.s:

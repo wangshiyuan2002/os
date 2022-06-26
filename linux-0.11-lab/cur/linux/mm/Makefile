@@ -1,10 +1,10 @@
 AR	=ar
-AS	=as
-LD	=ld
+AS	=as --32
+LD	=ld -m elf_i386
 LDFLAGS	=-m elf_i386 -Ttext 0 -e startup_32
 CC	=gcc -march=i386
 CFLAGS	=-w -g -fstrength-reduce -fomit-frame-pointer -mcld \
-	-finline-functions -nostdinc -fno-stack-protector -I../include
+	-finline-functions -nostdinc -fno-stack-protector -I../include -m32
 CPP	=gcc -E -nostdinc -I../include
 
 .c.o:
